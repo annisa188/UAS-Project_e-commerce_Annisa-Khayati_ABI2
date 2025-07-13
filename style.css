@@ -1,0 +1,241 @@
+/* === RESET & GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+body {
+  background: #ed8eb8;
+  color: #333;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;     /* ensure image never overflow */
+  height: auto;        /* keep original ratio */
+  display: block;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* === NAVBAR === */
+nav {
+  background: #E89EB8;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav .logo { font-size: 1.4rem; font-weight: 700; color: #d6336c; }
+nav ul { display: flex; gap: 1rem; }
+nav li a:hover { color: #d6336c; }
+nav .cart-btn { position: relative; }
+nav .cart-count{
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #d6336c;
+  color: #fff;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  font-size: .75rem;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* === HERO === */
+.hero{
+  min-height: 70vh;
+  background:url("https://images.unsplash.com/photo-1503341732071-4319d7a62852?auto=format&fit=crop&w=1350&q=80") center/cover;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:0 1rem;
+}
+.hero h1{
+  font-size:clamp(2.5rem,5vw,4rem);
+  color:#fff; text-shadow:0 2px 5px rgba(0,0,0,.4);
+}
+
+/* === SECTIONS === */
+section{ padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+
+/* ==== GRID PRODUK ==== */
+.product-grid {
+  display: grid !important;                 /* paksa jadi grid */
+  gap: 1rem;
+  /* kolom akan menyesuaikan lebar layar */
+  grid-template-columns: repeat(
+      auto-fill,
+      minmax(220px, 1fr)                    /* ≤ 220 px supaya muat banyak */
+  );
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ==== KARTU PRODUK ==== */
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: .75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: transform .2s;
+}
+
+.product-card:hover { transform: translateY(-4px); }
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.product-card h3 { font-size: 1rem; margin: .75rem 0 .4rem; }
+
+.price { color: #e0474c; font-weight: 600; margin-bottom: .5rem; }
+
+.btn { padding: .5rem 1rem; border-radius: .5rem; background:#d8356d; color:#fff; border:0; }
+.btn:hover { background:#c0295f; }
+
+
+/* === BUTTON === */
+.btn{
+  background:#d6336c;   /* FIX: visible background */
+  color:#fff;           /* FIX: white text */
+  border:none;
+  padding:.8rem 1.4rem; /* sedikit lebih besar */
+  border-radius:8px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.btn:hover{ background:#b31c55; }
+
+/* === CART DRAWER === */
+#cartDrawer{
+  position:fixed; top:0; right:-400px; width:360px; height:100vh;
+  background:#fff; box-shadow:-3px 0 8px rgba(0,0,0,.1);
+  padding:2rem 1.5rem; display:flex; flex-direction:column;
+  transition:right .3s ease; z-index:1500;
+}
+#cartDrawer.open{ right:0; }
+#cartDrawer h2{ margin-bottom:1.5rem; }
+#cart-items{ flex:1; overflow-y:auto; }
+.cart-item{ display:flex; gap:.75rem; margin-bottom:1rem; }
+.cart-item img{
+  width:60px; height:60px; object-fit:cover; border-radius:8px;
+}
+.cart-item-details{ flex:1; }
+.cart-item-details h4{ font-size:.95rem; margin-bottom:.25rem; }
+.cart-item-details .qty{ font-size:.85rem; color:#666; }
+.total{ font-size:1.1rem; font-weight:600; margin:1rem 0; }
+.checkout-btn{ width:100%; }
+.close-cart{ position:absolute; top:12px; right:16px; font-size:1.5rem; background:none; border:none; cursor:pointer; }
+
+/* === FOOTER === */
+footer{
+  background:#E89EB8;
+  text-align:center;
+  padding:2rem 1rem;
+  margin-top:3rem;
+  color:#777; font-size:.9rem;
+  box-shadow:0 -2px 6px rgba(0,0,0,.05);
+}
+
+/* === RESPONSIVE (≤600 px) === */
+@media(max-width:600px){
+  nav{ flex-direction:column; align-items:flex-start; }
+  nav ul{ flex-direction:column; width:100%; gap:.5rem; margin-top:.5rem; }
+  .hero h1{ font-size:2rem; }
+  .products-grid{ grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
+  .product-card img{ height:200px; }
+}
+/* === NAVBAR ======================================================= */
+.navbar {
+  display: flex !important;            /* paksa jadi baris datar */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #e79ab1;                 /* warna pink navbar */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a { text-decoration: none; color: #222; font-weight: 600; }
+
+/* === CART BUTTON di NAVBAR ======================================== */
+.cart-btn {
+  position: relative;
+  width: 46px;                   /* kotak kecil rapi */
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: .75rem;
+  background: #d8356d;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* lencana jumlah item */
+.cart-count {
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  color: #d8356d;
+  font-size: .7rem;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+/* === KARTU PRODUK + TOMBOL BELI =================================== */
+.product-card {               /* (grid‑nya sama seperti kemarin) */
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: .75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.product-card h3 { font-size: 1rem; margin: .75rem .9rem .4rem; }
+.price { margin: 0 .9rem .75rem; color:#d8356d; font-weight:600; }
+
+.product-card .btn {
+  display: block;              /* satu baris penuh */
+  width: calc(100% - 1.8rem);  /* sisakan kanan‑kiri 0.9rem */
+  margin: 0 .9rem 1rem;
+  padding: .5rem 0;
+  background: #d8356d;
+  color: #fff;
+  border: 0;
+  border-radius: .5rem;
+  font-size: .95rem;
+}
+.product-card .btn:hover { background:#c0295f; }
+
+/* === GRID PRODUK ================================================== */
+.product-grid {
+  display: grid !important;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}

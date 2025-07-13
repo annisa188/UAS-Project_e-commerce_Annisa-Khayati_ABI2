@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- ❗ Meta viewport valid -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NissFashion | Tentang Kami</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- ❗ Tambah CSS drawer kalau belum di‑import -->
+  <style>
+  </style>
+</head>
+<body>
+    <nav>
+    <a href="index.html" class="logo">NissFashion</a>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="about.html">Tentang Kami</a></li>
+      <li><a href="products.html">Produk</a></li>
+      <li><button class="btn cart-btn" onclick="toggleCart()">🛒 <span class="cart-count">0</span></button></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2 style="margin-bottom:1rem;">Tentang Kami</h2>
+    <p>Didirikan tahun 2025 di Bandung, NissFashion berkomitmen menyajikan tren fashion perempuan terkini dengan proses produksi yang ramah lingkungan dan juga mendukung produk lokal, karena semua koleksi kami dibuat oleh penjahit lokal, memastikan kualitas sekaligus mendukung perekonomian komunitas setempat. Ayo kita menyukai produk lokal dengan membeli produk di 'NissFashion'! </p>
+   <h3>Hubungi Kami</h3>
+    <p>
+      📞 +62 812‑3456‑7890<br>
+      ✉️ info@nissfashion.co.id<br>
+      📱 <a href="https://wa.me/6288218319724" target="_blank" rel="noopener">WhatsApp</a><br>
+      📸 <!-- ❗ ada spasi setelah a -->
+      <a href="https://www.instagram.com/_nisakhytii8?igshid=NzNrMWVnd2NtZXMz"
+         target="_blank" rel="noopener">@nisakhytii8</a>
+    </p>
+  </section>
+  <footer>
+    © 2025 NissFashion. All rights reserved.
+  </footer>
+
+  <!-- CART DRAWER (re‑use) -->
+  <div id="cartDrawer">
+    <button class="close-cart" onclick="hideCart()">✕</button>
+    <h2>Keranjang</h2>
+    <div id="cart-items"></div>
+    <div class="total">Total: Rp0</div>
+    <button class="btn checkout-btn" onclick="checkout()">Bayar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

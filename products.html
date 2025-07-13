@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NissFashion | Produk</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tombol Beli agak besar -->
+  <style>
+    .btn.buy { padding: .9rem 1.5rem; font-size: 1rem; }
+    /* Drawer contoh */
+    #cartDrawer  { position: fixed; right: -100%; top:0; width:85%; max-width:400px;
+                   height:100%; background:#fff; box-shadow:-3px 0 10px rgba(0,0,0,.3);
+                   overflow-y:auto; transition:right .3s; z-index:999; }
+    #cartDrawer.open { right: 0; }
+  </style>
+</head>
+
+<body>
+  <!-- =============== CART DRAWER =============== -->
+  <aside id="cartDrawer">
+    <button type="button" class="close-cart" onclick="hideCart()">✕</button>
+    <h2 style="padding:1rem">Keranjang</h2>
+    <div id="cart-items"></div>
+    <p class="total" style="padding:1rem">Total: Rp0</p>
+    <button type="button" class="btn checkout-btn" onclick="checkout()">Bayar</button>
+  </aside>
+
+  <!-- PERBAIKAN TAG META -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NissFashion | Produk</title>
+  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Produk</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+
+  <!-- SEDIKIT CSS TAMBAHAN AGAR TOMBOL LEBIH BESAR -->
+  <style>
+    .btn.buy{
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- =============== NAVBAR =============== -->
+  <nav>
+    <a href="index.html" class="logo">NissFashion</a>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="about.html">Tentang Kami</a></li>
+      <li><a href="products.html">Produk</a></li>
+      <li>
+        <button class="btn cart-btn" onclick="toggleCart()">🛒
+          <span class="cart-count">0</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- =============== PRODUK GRID =============== -->
+  <section>
+    <h2 style="margin-bottom:2rem; text-align:center;">Koleksi Terbaru</h2>  
+       
+<section class="product-grid">
+  <!-- 1 -->
+      <div class="product-card">
+        <img src="img.html/abaya.jpg" 
+        <div class="info">Abaya elegan dengan bahan jatuh dan nyaman dipakai. Desain simpel namun anggun, cocok untuk acara formal maupun harian.
+          <h3>Abaya Premium Nissfashion</h3>
+          <p class="price">Rp 110.000</p>
+          <button class="btn buy" onclick="addToCart(1)">Beli</button>
+        </div>
+      </div>
+
+          <!-- 2 -->
+      <div class="product-card">
+        <img src="img.html/onesetformal.jpg" 
+        <div class="info">Setelan formal stylish terdiri dari atasan dan bawahan senada. Tampil profesional dan modis dalam satu paket.
+          <h3>One Set Formal</h3>
+          <p class="price">Rp 70.000</p>
+          <button class="btn buy" onclick="addToCart(2)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <img src="img.html/blouse.jpg" alt="Tunik Premium">
+        <div class="info">Blouse wanita dengan potongan modern dan bahan adem, pas untuk gaya santai atau kerja.
+          <h3>Blouse Nissfashion</h3>
+          <p class="price">Rp 40.000</p>
+          <button class="btn buy" onclick="addToCart(3))">Beli</button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <img src="img.html/rokcargo.jpg" 
+        <div class="info">Rok cargo kekinian dengan kantong multifungsi. Cocok untuk tampilan edgy dan aktif.
+          <h3>Rok Cargo</h3>
+          <p class="price">Rp 55.000</p>
+          <button class="btn buy" onclick="addToCart(4)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <img src="img.html/sweater1.jpg"
+        <div class="info">Sweater rajut hangat dengan bahan lembut, desain minimalis cocok untuk musim dingin atau cuaca sejuk.
+
+          <h3>Sweater Nissfashion</h3>
+          <p class="price">Rp 45.000</p>
+          <button class="btn buy" onclick="addToCart(5)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <img src="img.html/overall.jpg"
+        <div class="info">Overall kasual dengan desain yang trendy, mudah dipadukan untuk tampilan playful dan stylish.
+
+          <h3>Overall Nissfashion</h3>
+          <p class="price">Rp 85.000</p>
+          <button class="btn buy" onclick="addToCart(6)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="product-card">
+        <img src="img.html/Kemeja.jpg">
+        <div class="info">Kemeja wanita dengan model klasik modern. Cocok untuk tampilan smart-casual atau kerja.
+
+          <h3>Kemeja formal wanita </h3>
+          <p class="price">Rp 35.000</p>
+          <button class="btn buy" onclick="addToCart(7)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="product-card">
+        <img src="img.html/cardigan.jpg"
+        <div class="info">Cardigan dengan bahan yang lembut dan ringan. Cocok untuk layering di segala suasana.
+          <h3>cardigan Nissfashion</h3>
+          <p class="price">Rp 30.000</p>
+          <button class="btn buy" onclick="addToCart(8)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="product-card">
+        <img src="img.html/onesetolahraga.jpg"
+        <div class="info">Setelan olahraga modis dan nyaman, menyerap keringat dengan baik, bikin kamu tetap aktif dan stylish walaupun kamu memakai hijab.
+          <h3>Oneset Olahraga Wanita</h3>
+          <p class="price">Rp 90.000</p>
+          <button class="btn buy"     onclick="addToCart(9)">Beli</button>
+        </div>
+      </div>
+      
+  <!-- 10 -->
+      <div class="product-card">
+        <img src="img.html/rok.jpg" 
+        <div class="info">Rok wanita dengan potongan A-line yang anggun, mudah dipadukan untuk acara santai maupun semi-formal.
+          <h3>Rok Nissfashion</h3>
+          <p class="price">Rp 95.000</p>
+          <button class="btn buy" onclick="addToCart(10)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="product-card">
+        <img src="img.html/jeanskulot.jpg" 
+        <div class="info">Celana jeans kulot longgar dan trendi, cocok untuk tampilan santai tapi tetap fashionable.
+
+          <h3>Jeans kulot</h3>
+          <p class="price">Rp 60.000</p>
+          <button class="btn buy" onclick="addToCart(11)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="product-card">
+        <img src="img.html/tunikbrukat.jpg" alt="Tunik Premium">
+        <div class="info">Tunik brukat elegan dengan detail mewah. Ideal untuk acara spesial atau formal.
+          <h3>Tunik brukat</h3>
+          <p class="price">Rp 75.000</p>
+          <button class="btn buy" onclick="addToCart(12)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="product-card">
+        <img src="img.html/outher.jpg" 
+        <div class="info">Outer ringan dan stylish, cocok untuk layering harian. Desain modern membuatmu tampil beda.
+
+          <h3>outher nissfashion</h3>
+          <p class="price">Rp 50.000</p>
+          <button class="btn buy" onclick="addToCart(13)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="product-card">
+        <img src="img.html/cardigancrop.jpg"
+        <div class="info">Cardigan crop kekinian yang pas untuk tampilan santai atau semi-formal, cocok dipadukan dengan high-waist pants.
+          <h3>cardigan crop Nissfashion</h3>
+          <p class="price">Rp 40.000</p>
+          <button class="btn buy" onclick="addToCart(14)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="product-card">
+        <img src="img.html/onesetrok.jpg"
+        <div class="info">One set atasan dan rok serasi, praktis dan fashionable. Gaya feminin dalam satu paket.
+          <h3>Oneset rok Nissfashion</h3>
+          <p class="price">Rp 100.000</p>
+          <button class="btn buy" onclick="addToCart(15)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="product-card">
+        <img src="img.html/dressmuslimah.jpg">
+        <div class="info">Dress panjang muslimah yang anggun dan sopan. Bahan adem dan desain menawan untuk berbagai acara.
+          <h3>dress muslimah </h3>
+          <p class="price">Rp 90.000</p>
+          <button class="btn buy" onclick="addToCart(16)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="product-card">
+        <img src="img.html/vest.jpg"
+        <div class="info">Vest rajut simpel tapi kece untuk tampilan layer yang unik dan kekinian.
+          <h3>Vest rajut Nissfashion</h3>
+          <p class="price">Rp 40.000</p>
+          <button class="btn buy" onclick="addToCart(17)">Beli</button>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="product-card">
+        <img src="img.html/kebaya.jpg"
+        <div class="info">Kebaya modern dengan detail elegan, cocok untuk acara formal, wisuda, atau pesta keluarga.
+
+          <h3>kebaya nissfashion</h3>
+          <p class="price">Rp 125.000</p>
+          <button class="btn buy"     onclick="addToCart(18)">Beli</button>
+        </div>
+      </div>
+      
+<!-- 19 -->
+      <div class="product-card">
+        <img src="img.html/cardiganrajut.jpg"
+        <div class="info">
+          <h3>cardigan rajut</h3>Cardigan rajut hangat dengan pilihan warna soft. Pas untuk segala gaya dan cuaca.
+          <p class="price">Rp 65.000</p>
+          <button class="btn buy"     onclick="addToCart(19)">Beli</button>
+        </div>
+      </div>
+
+    </div><!-- ./products-grid -->
+    <button 'onclick' = "tambahKeKeranjang('Produk A', 10000)"
+  </section>
+
+  <!-- =============== CART DRAWER=============== -->
+  <div id="cartDrawer">
+    <button class="close-cart" onclick="hideCart()">✕</button>
+    <h2>Keranjang</h2>
+    <div id="cart-items"></div>
+    <div class="total">Total: Rp </div>
+    <button class="btn checkout-btn" onclick="checkout()">Bayar</button>
+  </div>
+  <!-- SCRIPT -->
+  <script src="scrift.js"></script>
+</body>
+</html>
+ <!-- SCRIPT – taruh paling akhir -->
+  <script src="app.js" defer></script>
+</body>
+</html>
+  <!-- =============== FOOTER =============== -->
+  <footer>
+    © 2025 NissFashion. All rights reserved.
+  </footer>
